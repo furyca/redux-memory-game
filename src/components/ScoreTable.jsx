@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { startGame } from '../redux/frameworksSlice'
 
 const ScoreTable = () => {
-    const score = useSelector(state => state.frameworksSlice.score)
+    const {score, activeFrameworks} = useSelector(state => state.frameworksSlice)
 
     const dispatch = useDispatch()
     const startNewGame = () => {
@@ -11,7 +11,7 @@ const ScoreTable = () => {
     return (
         <div className='scoretable'>
             <h3>Score: {score}</h3>
-            <button onClick={startNewGame}>Start A New Game</button>
+            <button onClick={startNewGame} disabled={activeFrameworks.length === 2}>Start A New Game</button>
         </div>
     )
 }

@@ -1,20 +1,16 @@
-import { useSelector } from "react-redux";
-import Card from "./components/Card";
-import { nanoid } from "@reduxjs/toolkit";
 import ScoreTable from "./components/ScoreTable";
+import Game from "./components/Game";
+import ReactConfetti from "react-confetti";
+import { useSelector } from "react-redux";
 
 function App() {
-  const shuffledCards = useSelector(state => state.frameworksSlice.randomizedFrameworks)
-  
+  const { completedFrameworks } = useSelector(state => state.frameworksSlice)
+
   return (
     <div className="app">
       <ScoreTable />
-      <div className="container">
-        {shuffledCards.map(card => {
-          const id = nanoid()
-          return <Card key={id} name={card} id={id} src={`/assets/${card}.png`} />
-        })}
-      </div>
+      <Game />
+      {completedFrameworks.length === 30 && <ReactConfetti />}
     </div>
   )
 }
