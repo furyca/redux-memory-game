@@ -1,12 +1,18 @@
 ## Redux Memory Game
 
 
-Game Start
----
-![memoryinit](https://user-images.githubusercontent.com/69170957/232591798-bc7dbf8b-a546-41a0-80cf-837378f83107.jpg)
-
-
-Gameplay
+### 320px view
 ---
 
-![memoryplay](https://user-images.githubusercontent.com/69170957/232591802-e3371f53-1c6f-4339-b3e5-0369e82c4109.jpg)
+![320px](https://github.com/furyca/redux-memory-game/assets/69170957/a1a341d3-b485-4f64-9d20-431aaaa2bc6f)
+
+
+### 768px view
+---
+
+![768px](https://github.com/furyca/redux-memory-game/assets/69170957/b9b28ae5-aa0e-4fa2-a5f5-d4a0c5b100ee)
+
+### 1440px view
+---
+
+![1440px](https://github.com/furyca/redux-memory-game/assets/69170957/fb376ba8-c7d8-449d-beaf-9264edb8df4c)
