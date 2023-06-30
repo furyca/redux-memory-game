@@ -24,7 +24,7 @@ code {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 img,
@@ -172,7 +172,8 @@ div[disabled] {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #af00af;
+    background-color: #5c0080;
+    color: whitesmoke;
   }
   
   .scoretable h3 {
