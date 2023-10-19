@@ -21,6 +21,5 @@ export const shuffleCards = (duplicatedFrameworks) => {
       } 
       else continue
     }
-    console.log(tempArray)
     return tempArray
   }
