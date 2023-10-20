@@ -60,22 +60,22 @@ h6 {
 
 .app {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(25deg, #00a2c4 0%, #b2f1ff 50%, #00e8ff 100%);
 }
 
 .container {
-  padding: 20px;
+  padding: 1rem;
   width: 50%;
-  height: 680px;
   background-color: #313131;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1%;
+  grid-gap: .5rem;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .card {
@@ -102,26 +102,29 @@ div[disabled] {
 }
 
 .scoretable {
-  position: fixed;
+  text-align: center;
+  position: absolute;
   top: 50px;
   left: 50px;
 }
 
-.scoretable h3 {
-  margin-bottom: 20px;
+.scoretable h2 {
+  margin-bottom: 2rem;
 }
 
 .scoretable button {
   border: none;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: green;
-  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 4px black;
+  padding: .5rem 1rem;
+  background-color: #004b80;
+  color: #dcdcdc;
   cursor: pointer;
 }
 
 .scoretable button:hover {
-  background-color: darkgreen;
+  background-color: #003a64;
+  scale: 1.05;
 }
 
 .correct {
@@ -154,15 +157,17 @@ div[disabled] {
   
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .container {
     width: 100%;
     border-radius: 0;
     box-shadow: 0 -2px 5px black;
+    flex-grow: 1;
   }
 
   .app {
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .scoretable {
@@ -171,12 +176,12 @@ div[disabled] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #5c0080;
+    padding: 1rem 1rem 2rem;
+    background-color: #504a56;
     color: whitesmoke;
   }
   
-  .scoretable h3 {
+  .scoretable h2 {
     margin-bottom: 0;
   }
 
@@ -186,17 +191,17 @@ div[disabled] {
   }
 
   img {
-    padding: 5px;
+    padding: .5rem;
   }
 }
 
-@media (min-width: 600px) and (max-width: 1025px) {
+@media (min-width: 900px) and (max-width: 1281px) {
   .container {
     width: 60%;
-    max-height: 100%;
-    margin: 10px;
+    margin: 1rem;
   }
   .app {
-    justify-content: flex-end;
+    align-items: flex-end;
   }
+  
 }

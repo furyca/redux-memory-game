@@ -5,7 +5,7 @@ import ReactCardFlip from "react-card-flip";
 
 const Card = ({ name, id, src }) => {
   const { activeFrameworks, completedFrameworks } = useSelector(state => state.frameworksSlice)
-  const [flip, setFlip] = useState(false);
+  const [flip, setFlip] = useState(true);
   const [correct, setCorrect] = useState(false);
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const Card = ({ name, id, src }) => {
 
     if (activeFrameworks.length === 1) {
       setTimeout(() => {
-        dispatch(checkCards()); //{ name, id, src } not used
+        dispatch(checkCards());
       }, 750);
     }
   };
